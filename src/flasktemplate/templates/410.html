@@ -1,49 +1,30 @@
-{% from 'header.html' import header %} {% from 'footer.html' import footer %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Jacob Neave" />
-    <meta name="description" content="Page Removed" />
+{% extends "base.html" %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
-      rel="stylesheet"
-    />
+{% block title %}
+    410 - Page Removed
+{% endblock %}
 
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/404.css" />
+{% block description %}
+    Page removed
+{% endblock %}
 
-    <script src="/js/script.js" defer></script>
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="/css/particles.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="/css/404.css") }}">
+{% endblock %}
 
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="/css/hamburger.css" />
-    <script src="/js/hamburger.js"></script>
-
-    <title>410 Page Removed</title>
-  </head>
-  <body>
-    {{ header() }}
+{% block content %}
     <main id="maindiv">
-      <div id="div1">
-        <div id="particles-js"></div>
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-        <script src="/js/particles_app.js"></script>
-        <h1>
-          <em>410 - Page Removed&nbsp;</em>
-        </h1>
-        <p>
-          Sorry the page <code>{{ url }}</code> has been permanently removed.
-        </p>
-      </div>
+        <div id="div1">
+            <div id="particles-js"></div>
+            <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+            <script src="{{ url_for("static", filename="/js/particles_app.js") }}"></script>
+            <h1>
+                <em>410 - Page Removed&nbsp;</em>
+            </h1>
+            <p>
+                Sorry the page <code>{{ url }}</code> has been permanently removed.
+            </p>
+        </div>
     </main>
-    {{ footer() }}
-  </body>
-</html>
+{% endblock %}

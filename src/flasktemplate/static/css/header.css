@@ -1,0 +1,21 @@
+header {
+    background-color: #A33327;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 20px;
+}
+
+header a {
+    font-size:larger
+}
+
+header a:link,
+header a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+}
+

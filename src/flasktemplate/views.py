@@ -18,8 +18,9 @@ def about():
 
 
 @app.route('/login', methods=["GET", "POST"])
-def log_in():
-    if request.method == "GET": return render_template('login.html')
+def login():
+    if request.method == "GET":
+        return render_template('login.html')
     if request.method == "POST":
         return "almost there"
 

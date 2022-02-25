@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Jacob Neave"/>
+    <meta name="description" content="{% block description %}{% endblock %}"/>
+
+    <!--  import font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"/>
+
+    <!--  load base stylesheets  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename="/css/base.css") }}"/>
+    <link rel="stylesheet" href="{{ url_for("static", filename="/css/header.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="/css/footer.css") }}">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{{ url_for("static", filename="/css/hamburger.css") }}"/>
+    <script src="{{ url_for("static", filename="/js/hamburger.js") }}"></script>
+
+
+    <title>{% block title %}{% endblock %}</title>
+
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+<body>
+    {% include "header.html" %}
+    {% block content %}{% endblock %}
+    {% include "footer.html" %}
+</body>
+</html>
