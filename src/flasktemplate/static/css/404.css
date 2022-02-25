@@ -1,0 +1,29 @@
+#div1 {
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+
+html,
+body,
+#maindiv,
+#div1 {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#maindiv {
+    height: 100%;
+}
+
+#particles-js,
+#div1,
+#maindiv {
+    height: 100%
+}
+
+#div1 p,
+#div1 h1 {
+    left: 2rem;
+    margin: 25px;
+}

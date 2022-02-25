@@ -1,0 +1,50 @@
+{% from 'header.html' import header %} {% from 'footer.html' import footer %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Jacob Neave" />
+    <meta
+      name="description"
+      content="About"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js" defer></script>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/hamburger.css" />
+    <script src="js/hamburger.js"></script>
+
+    <title>About | ToKa Fitness</title>
+  </head>
+  <body>
+    {{ header() }}
+    <main id="maindiv">
+      <div id="div1">
+        <div id="particles-js"></div>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script src="js/particles_app.js"></script>
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+      </div>
+    </main>
+    {{ footer() }}
+  </body>
+</html>
