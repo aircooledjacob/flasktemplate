@@ -8,6 +8,10 @@
     about
 {% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="/css/particles.css") }}">
+{% endblock %}
+
 {% block content %}
     <main id="maindiv">
         <div id="div1">
